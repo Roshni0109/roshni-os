@@ -23,15 +23,3 @@ python -m http.server 4611
 
 Then open http://localhost:4611. (Opening `index.html` directly via `file://` also works.)
 
-## Deploy
-
-Static site, zero config. Works on Vercel, Netlify, GitHub Pages, Cloudflare Pages — point any of them at this repo root with no build command and no output directory override needed.
-
-## Structure
-
-```
-index.html    entry point / markup
-style.css     all styling (pastel theme, pixel windows, responsive rules)
-script.js     window manager, content data, sound synth, interactions
-assets/       résumé PDF served to the "Resume.pdf" window
-```
