@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RoshniOS — Roshni Multani, AI &amp; Full-Stack Engineer</title>
+<meta name="description" content="Roshni Multani — full-stack engineer building production-grade AI systems and LLM-powered applications. A pixel-art desktop portfolio." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== BOOT SCREEN ===== -->
+  <div id="boot" class="boot">
+    <div class="boot-inner">
+      <div class="boot-logo">
+        <span class="boot-logo-mark">&#9636;</span> Roshni<span class="boot-logo-os">OS</span>
+      </div>
+      <div class="boot-log" id="bootLog"></div>
+      <div class="boot-bar"><div class="boot-bar-fill"></div></div>
+      <button class="boot-enter" id="bootEnter">&#9654; CLICK TO ENTER</button>
+      <p class="boot-hint">RoshniOS v1.0 &nbsp;&middot;&nbsp; 8-bit sound on &middot; headphones friendly</p>
+    </div>
+  </div>
+
+  <!-- ===== MENU BAR ===== -->
+  <div class="menubar" id="menubar">
+    <div class="menu-left">
+      <span class="menu-logo" id="menuLogo">&#9636;</span>
+      <span class="menu-item" data-menu="rosh">RoshniOS</span>
+      <span class="menu-item" data-menu="file">File</span>
+      <span class="menu-item" data-menu="view">View</span>
+      <span class="menu-item" data-menu="help">Help</span>
+    </div>
+    <div class="menu-right">
+      <button class="menu-icon" id="soundToggle" title="Toggle sound" aria-label="Toggle sound">&#128266;</button>
+      <span class="menu-batt" title="Battery: powered by chai">&#9632;&#9632;&#9632;&#9632;</span>
+      <span class="menu-clock" id="clock">--:--</span>
+    </div>
+    <div class="dropdown" id="dropdown" hidden></div>
+  </div>
+
+  <!-- ===== DESKTOP ===== -->
+  <main class="desktop" id="desktop" aria-label="Desktop">
+    <div class="sky" id="sky" aria-hidden="true"></div>
+
+    <!-- sticky note -->
+    <div class="sticky" id="sticky">
+      <p>build small AI tools<br />a real person can<br />pick up &amp; use.</p>
+      <span class="sticky-sign">— Roshni</span>
+    </div>
+
+    <!-- status chip -->
+    <button class="status-chip" id="statusChip"><span class="status-dot" aria-hidden="true"></span>open to work</button>
+
+    <!-- desktop icons -->
+    <div class="icons" id="icons" aria-label="Project icons"></div>
+
+    <!-- potted plant (decorative) -->
+    <div class="plant" aria-hidden="true">
+      <svg viewBox="0 0 20 26" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="3" height="9" fill="#3f9e99"/>
+        <rect x="4" y="4" width="7" height="7" fill="#63c5c0"/>
+        <rect x="10" y="2" width="7" height="8" fill="#4caba5"/>
+        <rect x="6" y="10" width="8" height="5" fill="#3f9e99"/>
+        <rect x="4" y="18" width="12" height="8" fill="#c96f4a"/>
+        <rect x="4" y="18" width="12" height="2" fill="#a85638"/>
+        <rect x="3" y="25" width="14" height="1" fill="#00000022"/>
+      </svg>
+    </div>
+
+    <!-- pixel character -->
+    <div class="character" id="character" aria-hidden="true"></div>
+    <div class="char-shadow" aria-hidden="true"></div>
+    <div class="think-hint" id="thinkHint" aria-hidden="true">&#128172;</div>
+
+    <!-- thought bubble -->
+    <div class="thought" id="thought" hidden role="status">
+      <p class="thought-text" id="thoughtText"></p>
+      <button class="thought-next" id="thoughtNext" title="Another thought" aria-label="Another thought">&#8635;</button>
+      <button class="thought-close" id="thoughtClose" title="Close" aria-label="Close thought">&times;</button>
+    </div>
+
+    <!-- trash -->
+    <button class="trash" id="trash" aria-label="Rejected Concepts (Trash)">
+      <span class="trash-ico" aria-hidden="true"></span>
+      <span class="trash-label">Rejected&nbsp;Concepts</span>
+    </button>
+
+    <!-- windows mount here -->
+    <div id="windows"></div>
+  </main>
+
+  <!-- ===== DOCK ===== -->
+  <nav class="dock" id="dock" aria-label="Dock"></nav>
+
+  <!-- desktop context menu -->
+  <div class="ctxmenu" id="ctxmenu" hidden></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
